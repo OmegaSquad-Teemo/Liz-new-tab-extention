@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "liz",
+  "version": "0.1",
+
+  "description": "一个新标签页扩展",
+  "author": "Neo",
+
+  "icons": {
+    "48": "./dist/icon/icon-48.png"
+  },
+
+  "browser_action": {
+    "default_icon": "./dist/icon/icon-32.png",
+    "default_title": "Liz",
+    "default_popup": "./dist/index.html"
+  },
+
+
+  "chrome_url_overrides" : {
+    "newtab": "./dist/index.html"
+  },
+  "chrome_settings_overrides": {
+    "homepage": "./dist/index.html"
+  },
+  
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "bookmarks",
+    "storage",
+    "activeTab",
+    "unlimitedStorage",
+    "contextMenus"
+  ],
+  "applications": {
+    "gecko": {
+      "id": "addon@example.com",
+      "strict_min_version": "70.0"
+    }
+  }
+}
